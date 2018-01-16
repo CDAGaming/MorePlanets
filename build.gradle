@@ -11,10 +11,9 @@ buildscript {
 
 plugins {
     id 'com.matthewprenger.cursegradle' version '1.0.9'
-    id 'net.franz-becker.gradle-lombok' version '1.5'
+    id 'io.franzbecker.gradle-lombok' version '1.11'
 }
 
-def api = new groovy.json.JsonSlurper().parseText(file("${api_token_path}").text)
 def mcVersion = project.mc_version
 
 apply plugin: 'net.minecraftforge.gradle.forge'
@@ -36,7 +35,7 @@ sourceCompatibility = targetCompatibility = JavaVersion.VERSION_1_8
 minecraft {
     version = "1.12.2-14.23.1.2600"
     runDir = "run"
-    mappings = "snapshot_20171003"
+    mappings = "snapshot_20180114"
     makeObfSourceJar = false
 }
 
@@ -75,7 +74,6 @@ dependencies {
 }
 
 curseforge {
-    apiKey = api.more_planets
     project {
         id = '261990'
         changelog = 'To read full change log use command /mpchangelog in-game.\n\n or following by this link: https://discord.gg/5KDqYh2'
@@ -89,7 +87,7 @@ curseforge {
 }
 
 lombok {
-    version = "1.16.6"
+    version = "1.16.20"
     sha256 = "e0a471be03e1e6b02bf019480cec7a3ac9801702bf7bf62f15d077ad4df8dd5d"
 }
 
