@@ -33,9 +33,9 @@ archivesBaseName = "More-Planets-All"
 sourceCompatibility = targetCompatibility = JavaVersion.VERSION_1_8
 
 minecraft {
-    version = "1.12.2-14.23.1.2600"
+    version = "1.12.2-14.23.1.2604"
     runDir = "run"
-    mappings = "snapshot_20180120"
+    mappings = "snapshot_20180124"
     makeObfSourceJar = false
 }
 
